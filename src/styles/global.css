@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Inter', sans-serif;
+  color: #000000;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --color-black: #000000;
+  --color-grey: #777777;
+  --color-light-grey: #bfbfbf;
+  --color-border: #e7e7e7;
+  --color-background: #ffffff;
+  --container-width: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  min-width: 320px;
+  background: var(--color-background);
+  color: var(--color-black);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+button, a {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: min(var(--container-width), 88%);
+  margin-inline: auto;
+}
+
+.section {
+  padding: 72px 0;
+  scroll-margin-top: 80px;
+}
+
+.section-heading {
+  margin-bottom: 38px;
+  text-align: center;
+}
+
+.section-heading .eyebrow {
+  color: var(--color-grey);
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.section-heading h2 {
+  margin-top: 5px;
+  font-size: clamp(28px, 4vw, 38px);
+  font-weight: 600;
+  letter-spacing: -1.3px;
+}
+
+.grid-background {
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.025) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+/* Consistent hover behaviour across content cards */
+.project-card,
+.certification-card,
+.badge-card,
+.contact-card,
+.skill-card,
+.skills-card {
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.project-card:hover,
+.certification-card:hover,
+.badge-card:hover,
+.contact-card:hover,
+.skill-card:hover,
+.skills-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.065);
+  border-color: #c9c9c9;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 55px 0;
+  }
+
+  .section-heading {
+    margin-bottom: 28px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* FINAL PORTFOLIO CARD SIZING */
+
+.section-heading {
+  margin-bottom: 28px;
+}
+
+/* Projects */
+.projects-grid {
+  grid-auto-rows: minmax(470px, auto);
+  gap: 22px;
+}
+
+.project-image-wrapper {
+  height: 165px;
+}
+
+.project-card-content {
+  padding: 17px 18px;
+}
+
+/* Certifications */
+.certifications-grid {
+  gap: 18px;
+}
+
+.certification-image {
+  height: 205px;
+  padding: 12px;
+}
+
+.certification-info {
+  padding: 16px 18px;
+}
+
+/* Badges */
+.badges-grid {
+  gap: 18px;
+}
+
+.badge-image {
+  height: 150px;
+  padding: 13px;
+}
+
+.badge-info {
+  padding: 16px 18px;
+}
+
+/* Consistent hover across every card */
+.project-card,
+.certification-card,
+.badge-card,
+.contact-card,
+.skill-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.project-card:hover,
+.certification-card:hover,
+.badge-card:hover,
+.contact-card:hover,
+.skill-card:hover {
+  transform: translateY(-5px);
+  border-color: #bdbdbd;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.075);
+}
+

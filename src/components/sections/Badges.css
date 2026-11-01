@@ -1,0 +1,173 @@
+.badges-section {
+  background: #ffffff;
+}
+
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.badge-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #dedede;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #111111;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.badge-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07);
+}
+
+.badge-image {
+  height: 190px;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fafafa;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.badge-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.badge-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 19px 20px 20px;
+}
+
+.badge-info h3 {
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.badge-info p {
+  margin-bottom: 16px;
+  color: #777777;
+  font-size: 12px;
+}
+
+.badge-info span {
+  margin-top: auto;
+  color: #111111;
+  font-size: 11px;
+  font-weight: 600;
+  border-bottom: 1px solid #999999;
+  padding-bottom: 3px;
+}
+
+@media (max-width: 900px) {
+  .badges-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .badges-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .badge-image {
+    height: 210px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .badge-card {
+    transition: none;
+  }
+}
+
+/* Compact badge cards */
+.badges-grid {
+  gap: 20px;
+}
+
+.badge-image {
+  height: 150px;
+  padding: 15px;
+}
+
+.badge-info {
+  padding: 14px 17px 16px;
+}
+
+.badge-info h3 {
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 7px;
+}
+
+.badge-info p {
+  font-size: 11px;
+  margin-bottom: 12px;
+}
+
+/* Uniform hover */
+.badge-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.badge-card:hover {
+  transform: translateY(-5px);
+  border-color: #bdbdbd;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* More compact badge cards */
+.badges-grid {
+  gap: 16px;
+}
+
+.badge-image {
+  height: 115px;
+  padding: 10px;
+}
+
+.badge-info {
+  padding: 10px 14px 12px;
+}
+
+.badge-info h3 {
+  font-size: 12px;
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
+
+.badge-info p {
+  font-size: 10px;
+  margin-bottom: 9px;
+}
+
+.badge-info span {
+  font-size: 10px;
+}
+
+
+/* Badge card hover */
+.badge-card {
+  transition: box-shadow 0.25s ease, border-color 0.25s ease !important;
+}
+
+.badge-card:hover {
+  border-color: #bdbdbd;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.09);
+}
+
