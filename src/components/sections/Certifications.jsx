@@ -6,25 +6,25 @@ const certifications = [
     title: 'AWS Partner: Containers on AWS (Technical)',
     issuer: 'Amazon Web Services',
     date: 'November 9, 2025',
-    image: '/images/aws-containers-certificate.png',
+    image: `${import.meta.env.BASE_URL}images/aws-containers-certificate.png`,
   },
   {
     title: 'AWS Partner: Migrating Workloads to AWS (Technical)',
     issuer: 'Amazon Web Services',
     date: 'November 20, 2025',
-    image: '/images/aws-migrating-workloads-certificate.png',
+    image: `${import.meta.env.BASE_URL}images/aws-migrating-workloads-certificate.png`,
   },
   {
     title: 'AWS Technical Essentials',
     issuer: 'Amazon Web Services',
     date: 'November 9, 2025',
-    image: '/images/aws-technical-essentials-certificate.png',
+    image: `${import.meta.env.BASE_URL}images/aws-technical-essentials-certificate.png`,
   },
   {
     title: 'Amazon CloudWatch – Troubleshooting',
     issuer: 'Amazon Web Services',
     date: 'October 30, 2026',
-    image: '/images/cloudwatch-troubleshooting-certificate.png',
+    image: `${import.meta.env.BASE_URL}images/cloudwatch-troubleshooting-certificate.png`,
   },
 ];
 
@@ -72,3 +72,5 @@ function Certifications() {
 }
 
 export default Certifications;
+
+

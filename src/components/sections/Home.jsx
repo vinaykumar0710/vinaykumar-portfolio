@@ -54,12 +54,12 @@ export default function Home() {
 
           <div className="home-buttons">
             <a
-              href="/Vinaykumar-Takankhar-Resume.pdf"
+              href={`${import.meta.env.BASE_URL}Vinaykumar-Takankhar-Resume.pdf`}
               className="home-button button-dark"
               target="_blank"
               rel="noreferrer"
             >
-              Download CV
+              Download Resume
             </a>
 
             <a href="#contact" className="home-button button-light">
@@ -94,3 +94,5 @@ export default function Home() {
     </section>
   );
 }
+
+

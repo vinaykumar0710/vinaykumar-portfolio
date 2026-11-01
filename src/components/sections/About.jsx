@@ -19,7 +19,7 @@ export default function About() {
             transition={{ duration: 0.7 }}
           >
             <img
-              src="/images/profile-photo.png"
+              src={`${import.meta.env.BASE_URL}images/profile-photo.png`}
               alt="Vinaykumar Takankhar"
               className="about-image"
             />
@@ -65,3 +65,5 @@ export default function About() {
     </section>
   );
 }
+
+

@@ -6,7 +6,7 @@ const projectData = {
   'self-healing-cicd': {
     title: 'Self-Healing CI/CD Deployment Pipeline',
     subtitle: 'Automated deployments with health checks and rollback.',
-    image: '/images/project-cicd.png',
+    image: `${import.meta.env.BASE_URL}images/project-cicd.png`,
     overview: 'A local deployment system designed to identify unhealthy releases and recover automatically. It uses a blue-green deployment approach to switch between application versions while checking application health.',
     architecture: ['Source code', 'Jenkins pipeline', 'Docker image', 'Blue-green application environments', 'Nginx reverse proxy', 'Health checks and rollback'],
     implementation: [
@@ -29,7 +29,7 @@ const projectData = {
     github: 'https://github.com/vinaykumar0710/iac-kubernetes-platform',
     title: 'Infrastructure as Code Kubernetes Platform',
     subtitle: 'A repeatable Kubernetes application platform provisioned with Terraform and Helm.',
-    image: '/images/project-kubernetes.png',
+    image: `${import.meta.env.BASE_URL}images/project-kubernetes.png`,
     overview: 'A local Kubernetes platform project focused on infrastructure provisioning, containerised application deployment and repeatable environment management.',
     architecture: ['Terraform configuration', 'kind Kubernetes cluster', 'Docker application image', 'Helm chart', 'Kubernetes namespace and deployment', 'Service verification and tests'],
     implementation: [
@@ -51,7 +51,7 @@ const projectData = {
     github: 'https://github.com/vinaykumar0710/observability-ai-diagnosis',
     title: 'Observability & Incident Diagnosis',
     subtitle: 'Monitoring application behaviour with metrics, logs and tracing components.',
-    image: '/images/project-observability.png',
+    image: `${import.meta.env.BASE_URL}images/project-observability.png`,
     overview: 'A containerised observability environment designed to monitor an application and support operational troubleshooting using an observability stack.',
     architecture: ['Sample application', 'Prometheus metrics collection', 'Grafana dashboards', 'Loki log aggregation', 'Tempo distributed tracing', 'Incident investigation'],
     implementation: [
@@ -73,7 +73,7 @@ const projectData = {
     github: 'https://github.com/mesh-trace/Mesh-Trace',
     title: 'MESH-TRACE — Smart Crash Detection System',
     subtitle: 'IoT-based crash detection for low-connectivity zones.',
-    image: '/images/mesh-trace-logo.png',
+    image: `${import.meta.env.BASE_URL}images/mesh-trace-logo.png`,
     overview: 'A team-built IoT crash detection system using vehicle-to-vehicle and vehicle-to-infrastructure communication. My primary contribution focused on AWS cloud infrastructure and the web application.',
     architecture: ['Embedded sensor nodes', 'BLE vehicle-to-vehicle communication', 'ESP32 LoRa relay', 'AWS IoT Core ingestion', 'Lambda processing', 'DynamoDB and S3 storage', 'API Gateway with Cognito authorisation', 'SNS notifications'],
     implementation: [
@@ -179,4 +179,6 @@ export default function ProjectDetails() {
     </main>
   );
 }
+
+
 

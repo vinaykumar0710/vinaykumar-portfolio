@@ -4,7 +4,7 @@ import './Projects.css';
 const projects = [
   {
     title: 'Self-Healing CI/CD Deployment Pipeline',
-    image: '/images/project-cicd.png',
+    image: `${import.meta.env.BASE_URL}images/project-cicd.png`,
     description: 'Built an automated deployment system using blue-green deployment, application health checks and rollback mechanisms to recover from unhealthy releases and maintain a stable application version.',
     technologies: ['Jenkins', 'Docker', 'Docker Compose', 'Nginx', 'Python', 'Flask', 'PowerShell'],
     tags: ['CI/CD', 'Blue-Green Deployment', 'Automation', 'Rollback'],
@@ -13,7 +13,7 @@ const projects = [
   },
   {
     title: 'Infrastructure as Code Kubernetes Platform',
-    image: '/images/project-kubernetes.png',
+    image: `${import.meta.env.BASE_URL}images/project-kubernetes.png`,
     description: 'Built a repeatable Kubernetes application platform using Terraform, Docker and Helm, with infrastructure provisioning, application deployment and deployment verification.',
     technologies: ['Terraform', 'Kubernetes', 'kind', 'Docker', 'Helm'],
     tags: ['Infrastructure as Code', 'Kubernetes', 'Containerisation', 'Automation'],
@@ -22,7 +22,7 @@ const projects = [
   },
   {
     title: 'Observability & Incident Diagnosis',
-    image: '/images/project-observability.png',
+    image: `${import.meta.env.BASE_URL}images/project-observability.png`,
     description: 'Developed an observability environment to monitor application behaviour, collect telemetry and support troubleshooting through metrics, dashboards, logs and distributed tracing.',
     technologies: ['Prometheus', 'Grafana', 'Loki', 'Tempo', 'Docker Compose'],
     tags: ['Observability', 'Monitoring', 'Incident Diagnosis', 'Troubleshooting'],
@@ -31,7 +31,7 @@ const projects = [
   },
   {
     title: 'MESH-TRACE — Smart Crash Detection System',
-    image: '/images/mesh-trace-logo.png',
+    image: `${import.meta.env.BASE_URL}images/mesh-trace-logo.png`,
     description: 'Contributed to an IoT-based crash detection system using vehicle-to-vehicle and vehicle-to-infrastructure communication, including AWS cloud infrastructure for telemetry ingestion, crash data storage and notification workflows.',
     technologies: ['AWS IoT Core', 'Lambda', 'DynamoDB', 'S3', 'SNS', 'API Gateway', 'Cognito', 'Raspberry Pi', 'ESP32', 'LoRa'],
     tags: ['IoT', 'AWS Cloud', 'Embedded Systems', 'LoRa Communication'],
@@ -91,4 +91,6 @@ export default function Projects() {
     </section>
   );
 }
+
+
 
