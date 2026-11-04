@@ -1,16 +1,16 @@
-
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import './Navbar.css';
 
 const links = [
-  { label: 'Home', href: '/#home' },
-  { label: 'About', href: '/#about' },
-  { label: 'Skills', href: '/#skills' },
-  { label: 'Projects', href: '/#projects' },
-  { label: 'Certifications', href: '/#certifications' },
-  { label: 'Badges', href: '/#badges' },
-  { label: 'Contact', href: '/#contact' },
+  { label: 'Home', id: 'home' },
+  { label: 'About', id: 'about' },
+  { label: 'Skills', id: 'skills' },
+  { label: 'Projects', id: 'projects' },
+  { label: 'Certifications', id: 'certifications' },
+  { label: 'Badges', id: 'badges' },
+  { label: 'Contact', id: 'contact' },
 ];
 
 export default function Navbar() {
@@ -21,9 +21,14 @@ export default function Navbar() {
   return (
     <header className="navbar">
       <div className="nav-container">
-        <a href="#home" className="nav-logo" onClick={closeMenu}>
+        <Link
+          to="/"
+          state={{ scrollToSection: 'home' }}
+          className="nav-logo"
+          onClick={closeMenu}
+        >
           Portfolio
-        </a>
+        </Link>
 
         <button
           className="mobile-menu-button"
@@ -36,13 +41,17 @@ export default function Navbar() {
 
         <nav className={`nav-links ${menuOpen ? 'nav-open' : ''}`}>
           {links.map((link) => (
-            <a key={link.href} href={link.href} onClick={closeMenu}>
+            <Link
+              key={link.id}
+              to="/"
+              state={{ scrollToSection: link.id }}
+              onClick={closeMenu}
+            >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
       </div>
     </header>
   );
 }
-

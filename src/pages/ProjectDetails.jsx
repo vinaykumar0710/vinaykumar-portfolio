@@ -1,3 +1,4 @@
+import { useLayoutEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 import './ProjectDetails.css';
@@ -96,6 +97,15 @@ const projectData = {
 
 export default function ProjectDetails() {
   const { projectId } = useParams();
+
+  useLayoutEffect(() => {
+    const root = document.documentElement;
+    const previousBehavior = root.style.scrollBehavior;
+
+    root.style.scrollBehavior = 'auto';
+    window.scrollTo(0, 0);
+    root.style.scrollBehavior = previousBehavior;
+  }, [projectId]);
   const project = projectData[projectId];
 
   if (!project) {
@@ -103,7 +113,7 @@ export default function ProjectDetails() {
       <main className="project-detail-page">
         <div className="container">
           <h1>Project not found</h1>
-          <Link to="/#projects" className="detail-back"><ArrowLeft size={17} /> Back to projects</Link>
+          <Link to="/" state={{ scrollToSection: 'projects' }} className="detail-back"><ArrowLeft size={17} /> Back to projects</Link>
         </div>
       </main>
     );
@@ -112,7 +122,7 @@ export default function ProjectDetails() {
   return (
     <main className="project-detail-page">
       <div className="container">
-        <Link to="/#projects" className="detail-back"><ArrowLeft size={17} /> Back to projects</Link>
+        <Link to="/" state={{ scrollToSection: 'projects' }} className="detail-back"><ArrowLeft size={17} /> Back to projects</Link>
 
         <header className="detail-header">
           <p className="detail-eyebrow">PROJECT OVERVIEW</p>
@@ -173,12 +183,15 @@ export default function ProjectDetails() {
               GitHub Repository <ExternalLink size={15} />
             </a>
           )}
-          <Link to="/#projects" className="project-button project-button-light">Back to all projects</Link>
+          <Link to="/" state={{ scrollToSection: 'projects' }} className="project-button project-button-light">Back to all projects</Link>
         </div>
       </div>
     </main>
   );
 }
+
+
+
 
 
 

@@ -136,20 +136,6 @@ img {
   margin-bottom: 28px;
 }
 
-/* Projects */
-.projects-grid {
-  grid-auto-rows: minmax(470px, auto);
-  gap: 22px;
-}
-
-.project-image-wrapper {
-  height: 165px;
-}
-
-.project-card-content {
-  padding: 17px 18px;
-}
-
 /* Certifications */
 .certifications-grid {
   gap: 18px;
@@ -196,4 +182,5 @@ img {
   border-color: #bdbdbd;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.075);
 }
+
 
